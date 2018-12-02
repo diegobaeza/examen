@@ -22,3 +22,4 @@ class Region(models.Model):
 
 class Ciudad(models.Model):
     nombre = models.CharField(max_length=80)
+    
