@@ -7,7 +7,7 @@ class Productos(models.Model):
     nombre = models.CharField(max_length=70)
     costo_presupuesto = models.IntegerField(blank=True)
     costo_real = models.IntegerField(blank=True)
-    tienda = models.ForeignKey(Tienda, on_delete=models.CASCADE)
+    tienda = models.ManyToManyField(Tienda)
     notas = models.TextField(max_length=200, blank=True)
 
 class Tienda(models.Model):
@@ -16,3 +16,4 @@ class Tienda(models.Model):
     direccion = models.CharField(max_length=80)
     ciudad = models.CharField(max_length=80)
     region = models.CharField(max_length=80)
+
