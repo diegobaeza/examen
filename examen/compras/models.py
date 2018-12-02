@@ -14,6 +14,11 @@ class Tienda(models.Model):
     nombre = models.CharField(max_length=80)
     sucursal = models.CharField(max_length=80)
     direccion = models.CharField(max_length=80)
-    ciudad = models.CharField(max_length=80)
-    region = models.CharField(max_length=80)
+    ciudad = models.ManyToManyField(Ciudad, max_length=80)
+    region = models.ManyToManyField(Region, max_length=80)
 
+class Region(models.Model):
+    nombre = models.CharField(max_length=80)
+
+class Ciudad(models.Model):
+    nombre = models.CharField(max_length=80)
