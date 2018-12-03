@@ -13,7 +13,7 @@ urlpatterns = [
     path('delete/<int:pk>', views.ProductosDelete.as_view(), name='productos_delete'),
     path('list_tienda', views.TiendaList.as_view(), name='tienda_list'),
     path('view_tienda/<int:pk>', views.TiendaView.as_view(), name='tienda_view'),
-    path('new_tienda', views.TiendaCreate.as_view(), name='tienda_new'),
+    path('new', views.TiendaCreate.as_view(), name='tienda_new'),
     path('edit_tienda/<int:pk>', views.TiendaUpdate.as_view(), name='tienda_edit'),
     path('delete_tienda/<int:pk>', views.TiendaDelete.as_view(), name='tienda_delete')
 ]

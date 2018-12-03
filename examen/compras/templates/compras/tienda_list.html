@@ -18,16 +18,17 @@
         {% for tienda in object_list %}
         <tr>
         <td>{{ tienda.nombre }}</td>
-        <td>{{ tienda.costo_presupuesto }}</td>
-        <td>{{ tienda.costo_real }}</td>
-        <td>{{ tienda.tienda }}</td>
-        <td>{{ tienda.notas }}</td>
+        <td>{{ tienda.sucursal }}</td>
+        <td>{{ tienda.direccion }}</td>
+        <td>{{ tienda.ciudad }}</td>
+        <td>{{ tienda.region }}</td>
         <td><a href="{% url "tienda_view" tienda.id %}">Listar</a></td>
         <td><a href="{% url "tienda_edit" tienda.id %}">Modificar</a></td>
         <td><a href="{% url "tienda_delete" tienda.id %}">Eliminar</a></td>
         </tr>
         {% endfor %}
     </table>
+    </body>
     <br>
     <a href="{% url "tienda_new" %}">Agregar tienda</a>
 {% endblock %}
