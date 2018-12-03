@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<title>Examen</title>
 
-	<!--Import Google Icon Font-->
+	  <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
       <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.min.css' %}" media="screen,projection"/>
@@ -15,7 +15,8 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+	  <!--Manifest-->
+	  <link rel="manifest" href='{% static "manifest.json" %}'>
 </head>
 <body>
 	
@@ -55,7 +56,8 @@
 		              	<li><a href="#">Inicio</a></li>
 		              	<li><a href="#">Quienes somos</a></li>
 						<li><a href="#">Servicios</a></li>
-						<li><a href="{% url 'productos_list'%}">Productos</a></li>  
+						<li><a href="{% url 'productos_list'%}">Productos</a></li> 
+						<li><a href="{%url 'tienda_list' %}">Tienda</a></li> 
 		            </ul>
 
 		            <ul class="right hide-on-med-and-down">
